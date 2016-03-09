@@ -5,6 +5,7 @@
 
 target 'JustForMyWife' do
 pod 'Masonry'
+pod 'GPUImage'
 
 end
 
