@@ -10,10 +10,13 @@
 #import <GPUImage/GPUImage.h>
 
 #import "ViewController.h"
+#import "Camera.h"
 
 @interface ViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIButton *choiceBtn;
+
+@property (nonatomic, strong) Camera *cameraView;
 
 @end
 
@@ -25,7 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"主页";
     [self.view addSubview:self.choiceBtn];
-}
+   }
 
 - (void)viewWillLayoutSubviews {
     [self.choiceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,7 +66,9 @@
         
     }];
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"打开照相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self TakePhoto];
+//        [self TakePhoto];
+        [self.view addSubview:self.cameraView];
+         
     }];
     UIAlertAction *destroyAction = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         [self LocalPhoto];
@@ -115,6 +120,13 @@
         [_choiceBtn addTarget:self action:@selector(touchChoice:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _choiceBtn;
+}
+
+- (Camera *)cameraView {
+    if (_cameraView == nil) {
+        _cameraView = [Camera createScanViewInController:self scanBounds:[UIScreen mainScreen].bounds];
+    }
+    return _cameraView;
 }
 
 @end
