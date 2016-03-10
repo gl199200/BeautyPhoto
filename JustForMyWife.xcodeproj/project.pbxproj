@@ -15,6 +15,7 @@
 		7478FEB91C8FC45200FDF041 /* JustForMyWifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7478FEB81C8FC45200FDF041 /* JustForMyWifeUITests.m */; };
 		74A1B3A11C9112B2000A6A31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1B3A01C9112B2000A6A31 /* ViewController.m */; };
 		74A1B3A51C91147A000A6A31 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1B3A41C91147A000A6A31 /* Camera.m */; };
+		74A1B3A81C914955000A6A31 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A1B3A71C914955000A6A31 /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		74A1B3A01C9112B2000A6A31 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		74A1B3A31C91147A000A6A31 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		74A1B3A41C91147A000A6A31 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		74A1B3A61C914955000A6A31 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		74A1B3A71C914955000A6A31 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		74A1B3A91C914B0D000A6A31 /* TravellingSlow-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TravellingSlow-Prefix.pch"; sourceTree = "<group>"; };
 		CEACE2603F0C6F026ED9DEB1 /* Pods-JustForMyWife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustForMyWife.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustForMyWife/Pods-JustForMyWife.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,7 @@
 				7478FE971C8FC45200FDF041 /* AppDelegate.m */,
 				74A1B39E1C9112B2000A6A31 /* camera */,
 				7478FE9F1C8FC45200FDF041 /* Assets.xcassets */,
+				74A1B3A91C914B0D000A6A31 /* TravellingSlow-Prefix.pch */,
 				7478FEA41C8FC45200FDF041 /* Info.plist */,
 				7478FE931C8FC45200FDF041 /* Supporting Files */,
 			);
@@ -158,6 +163,8 @@
 			children = (
 				74A1B39F1C9112B2000A6A31 /* ViewController.h */,
 				74A1B3A01C9112B2000A6A31 /* ViewController.m */,
+				74A1B3A61C914955000A6A31 /* CameraViewController.h */,
+				74A1B3A71C914955000A6A31 /* CameraViewController.m */,
 			);
 			path = camera;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A1B3A81C914955000A6A31 /* CameraViewController.m in Sources */,
 				74A1B3A51C91147A000A6A31 /* Camera.m in Sources */,
 				7478FE981C8FC45200FDF041 /* AppDelegate.m in Sources */,
 				74A1B3A11C9112B2000A6A31 /* ViewController.m in Sources */,

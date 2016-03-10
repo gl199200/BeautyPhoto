@@ -7,16 +7,15 @@
 //
 
 #import <Masonry/Masonry.h>
-#import <GPUImage/GPUImage.h>
 
 #import "ViewController.h"
-#import "Camera.h"
+#import "CameraViewController.h"
+
 
 @interface ViewController () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIButton *choiceBtn;
 
-@property (nonatomic, strong) Camera *cameraView;
 
 @end
 
@@ -67,7 +66,10 @@
     }];
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"打开照相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 //        [self TakePhoto];
-        [self.view addSubview:self.cameraView];
+        CameraViewController *control = [[CameraViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:control];
+        [self presentViewController:nav animated:YES completion:nil];
+       
          
     }];
     UIAlertAction *destroyAction = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
@@ -120,13 +122,6 @@
         [_choiceBtn addTarget:self action:@selector(touchChoice:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _choiceBtn;
-}
-
-- (Camera *)cameraView {
-    if (_cameraView == nil) {
-        _cameraView = [Camera createScanViewInController:self scanBounds:[UIScreen mainScreen].bounds];
-    }
-    return _cameraView;
 }
 
 @end

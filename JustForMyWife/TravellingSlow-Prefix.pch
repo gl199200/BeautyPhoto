@@ -1,0 +1,44 @@
+//
+//  TravellingSlow.pch
+//  TravellingSlow
+//
+//  Created by Liu Feng on 11/26/15.
+//  Copyright © 2015 Fengche Education. All rights reserved.
+//
+
+#ifndef TravellingSlow_pch
+#define TravellingSlow_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "MYTool.h"
+#import "MYUserInfo.h"
+
+
+#define CUSTOMER_SERVICE_TELEPHONE @"021-61630289"
+
+#define COLOR(R, G, B, A)[UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+#define iOS8AndLater ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0?YES:NO)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#endif
+
+#ifdef DEBUG
+#define debugLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+
+#else
+#define debugLog(...)
+#define debugMethod()
+
+#endif
+
+#endif /* TravellingSlow_pch */
